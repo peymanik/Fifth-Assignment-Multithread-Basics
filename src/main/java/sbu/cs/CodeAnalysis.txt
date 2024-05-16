@@ -1,0 +1,6 @@
+first code:
+if we interrupt thread when it is on sleep, we will get exception, so catch block will catch the exception and prints "Thread was interrupted!" then finally block will run and prints "Thread will be finished here!!!"
+second code:
+when we run the runnable normaly, it will run in the main thread, and Thread.currentThread().getName() will pass "main" but if we create a thread and run the task on it, Thread.currentThread().getName() will pass Thread-0
+third code:
+when we run thread.start(), the Thread.currentThread().getName() method will pass Thread-0 because it is on the thread we created, after that we have thread.join(), and code will be stopped until thread finishes. after that "Back to: main" will be printed, because the thread in over and Thread.currentThread().getName() will pass main thread. 
